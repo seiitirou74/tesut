@@ -1,6 +1,6 @@
 # Streamlitライブラリをインポート
 import streamlit as st
-
+import random
 # ページ設定（タブに表示されるタイトル、表示幅）
 st.set_page_config(page_title="初ウェブアプリ", layout="wide")
 
@@ -29,3 +29,6 @@ st.write(f'あなたが選んだ数字は「{number}」です。')
 # 選択した数値を2進数に変換
 binary_representation = bin(number)[2:]  # 'bin'関数で2進数に変換し、先頭の'0b'を取り除く
 st.info(f'🔢 10進数の「{number}」を2進数で表現すると「{binary_representation}」になります。 🔢')  # 2進数の表示をハイライト
+
+min=st.number_input("最小値",value=0)
+max=st.number_input("最大値",value=100)
