@@ -32,3 +32,7 @@ st.info(f'🔢 10進数の「{number}」を2進数で表現すると「{binary_r
 
 min=st.number_input("最小値",value=0)
 max=st.number_input("最大値",value=100)
+
+if st.button("乱数を生成"):
+    r=random.randint(min,max)
+    st.write(r)
